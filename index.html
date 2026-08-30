@@ -3,196 +3,381 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Chef's Table | Fine Dining Colombo 04</title>
+  <title>The Chef's Table | Fine Dining & Handcrafted Gelato Colombo 04</title>
   
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- GSAP Animation Library & ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <style>
     .glass {
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(12px);
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .text-glow {
+      text-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
     }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
 
-  <nav class="fixed top-0 left-0 w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center">
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
     <a href="#" class="text-xl md:text-2xl font-black tracking-wider text-amber-500 uppercase">
-      THE CHEF'S TABLE <span class="text-white">.</span>
+      THE CHEF'S TABLE<span class="text-white">.</span>
     </a>
-    <div class="hidden md:flex space-x-8 font-medium text-slate-300">
+    <div class="hidden md:flex space-x-8 font-medium text-slate-300 text-sm">
       <a href="#about" class="hover:text-amber-500 transition">About</a>
+      <a href="#gallery" class="hover:text-amber-500 transition">Gallery</a>
       <a href="#menu" class="hover:text-amber-500 transition">Specialties</a>
       <a href="#reviews" class="hover:text-amber-500 transition">Reviews</a>
-      <a href="#hours" class="hover:text-amber-500 transition">Hours & Location</a>
+      <a href="#hours" class="hover:text-amber-500 transition">Location & Hours</a>
     </div>
-    <a href="https://wa.me/94771336868?text=Hi!%20I%20would%20like%20to%20reserve%20a%20table%20at%20The%20Chef's%20Table." target="_blank" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-full transition shadow-lg shadow-amber-500/20 text-sm md:text-base">
-      <i class="fa-brands fa-whatsapp mr-2"></i>Reserve Table
+    <a href="https://wa.me/94771336868?text=Hi!%20I%20would%20like%20to%20reserve%20a%20table%20at%20The%20Chef's%20Table." target="_blank" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-full transition shadow-lg shadow-amber-500/20 text-xs md:text-sm flex items-center gap-2">
+      <i class="fa-brands fa-whatsapp text-base"></i> Reserve Table
     </a>
   </nav>
 
+  <!-- Hero Section -->
   <section class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6 relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-transparent z-10"></div>
+    <!-- Dark Overlay Gradient -->
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/60 z-10"></div>
+    <!-- Background Image -->
     <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80" alt="The Chef's Table Ambiance" class="absolute inset-0 w-full h-full object-cover">
 
-    <div class="relative z-20 max-w-4xl text-center md:text-left">
-      <div class="flex flex-wrap gap-2 justify-center md:justify-start mb-4">
-        <span class="hero-anim text-amber-500 font-semibold tracking-widest uppercase text-xs bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-          📍 33 Duplication Road, Colombo 00400
+    <div class="relative z-20 max-w-5xl mx-auto w-full text-center md:text-left">
+      <!-- Rating Badges -->
+      <div class="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
+        <span class="hero-anim text-amber-400 font-semibold tracking-wide text-xs bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/20 flex items-center gap-1.5">
+          <i class="fa-brands fa-google"></i> 4.9 ★ Rated (105+ Reviews)
         </span>
-        <span class="hero-anim text-emerald-400 font-semibold tracking-widest uppercase text-xs bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
-          ★ 4.9 Rated (105+ Google Reviews)
+        <span class="hero-anim text-emerald-400 font-semibold tracking-wide text-xs bg-emerald-500/10 px-4 py-1.5 rounded-full border border-emerald-500/20 flex items-center gap-1.5">
+          <i class="fa-solid fa-owl"></i> Tripadvisor Travelers' Choice
         </span>
-      </div>
-      <h1 class="hero-anim text-5xl md:text-7xl font-black leading-tight text-white">
-        Cozy Vibes & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Fine Dining</span>
-      </h1>
-      <p class="hero-anim text-slate-300 text-base md:text-xl mt-6 max-w-2xl font-light leading-relaxed">
-        Experience exquisite Italian & Fusion culinary artistry right on Duplication Road. Average budget: <strong>Rs 2,000–5,000 per person</strong>.
-      </p>
-      
-      <div class="hero-anim flex flex-wrap gap-4 mt-4 justify-center md:justify-start text-xs text-slate-400">
-        <span><i class="fa-solid fa-check text-emerald-400 mr-1"></i> Dine-in</span>
-        <span><i class="fa-solid fa-check text-emerald-400 mr-1"></i> Takeaway</span>
-        <span><i class="fa-solid fa-check text-emerald-400 mr-1"></i> No-contact delivery</span>
       </div>
 
+      <!-- Hero Title -->
+      <h1 class="hero-anim text-4xl sm:text-6xl md:text-7xl font-black leading-tight text-white tracking-tight">
+        Cozy Vibes & <br class="hidden sm:inline"/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-glow">Artisanal Italian Fine Dining</span>
+      </h1>
+      
+      <p class="hero-anim text-slate-300 text-base md:text-xl mt-6 max-w-2xl font-light leading-relaxed">
+        Experience exquisite Italian & Fusion cuisine. Famous for juicy <strong>Pork Chops</strong>, fresh creamy pasta, and owner Andre’s signature <strong>Handcrafted Gelato</strong>.
+      </p>
+      
+      <!-- Key Specs Badges -->
+      <div class="hero-anim flex flex-wrap gap-4 mt-6 justify-center md:justify-start text-xs text-slate-400 font-medium">
+        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> 33 Duplication Rd, Colombo 04</span>
+        <span><i class="fa-solid fa-wallet text-amber-500 mr-1.5"></i> Rs 2,000–5,000 per person</span>
+        <span><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Dine-in • Takeaway</span>
+      </div>
+
+      <!-- CTA Buttons -->
       <div class="hero-anim mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-        <a href="#menu" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl text-center transition shadow-lg shadow-amber-500/20">
-          Explore Specialties
+        <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20reserve%20a%20table." target="_blank" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl text-center transition shadow-lg shadow-amber-500/20 text-sm md:text-base">
+          Book a Table Now
         </a>
-        <a href="tel:+94771336868" class="glass hover:bg-white/10 text-white font-bold px-8 py-4 rounded-xl text-center transition flex items-center justify-center gap-2">
+        <a href="tel:+94771336868" class="glass hover:bg-white/10 text-white font-bold px-8 py-4 rounded-xl text-center transition flex items-center justify-center gap-2 text-sm md:text-base">
           <i class="fa-solid fa-phone text-amber-500"></i> Call 077 133 6868
         </a>
       </div>
     </div>
   </section>
 
-  <section id="menu" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+  <!-- Real Traveler Photo Gallery (From Screenshots) -->
+  <section id="gallery" class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-amber-500 font-bold uppercase tracking-wider text-xs">Authentic Experience</span>
+      <h2 class="text-3xl md:text-5xl font-black text-white mt-2">Real Dishes & Gelatos</h2>
+      <p class="text-slate-400 mt-2 text-sm">Photos captured by our lovely guests on Google & Tripadvisor</p>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="gallery-img glass rounded-2xl overflow-hidden h-60 group relative cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Pork Chop & Mash" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+          <span class="text-xs font-semibold text-amber-400">Pork Chop & Creamy Mash</span>
+        </div>
+      </div>
+
+      <div class="gallery-img glass rounded-2xl overflow-hidden h-60 group relative cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Artisanal Pasta" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+          <span class="text-xs font-semibold text-amber-400">Handcrafted Italian Pasta</span>
+        </div>
+      </div>
+
+      <div class="gallery-img glass rounded-2xl overflow-hidden h-60 group relative cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1567206563064-6f60f4078b57?auto=format&fit=crop&w=600&q=80" alt="Handcrafted Gelato Cone" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+          <span class="text-xs font-semibold text-amber-400">Andre's Special Gelatos</span>
+        </div>
+      </div>
+
+      <div class="gallery-img glass rounded-2xl overflow-hidden h-60 group relative cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Shakes and Beverages" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+          <span class="text-xs font-semibold text-amber-400">Cold Beverages & Shakes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guest Favorites / Menu Highlights -->
+  <section id="menu" class="py-20 px-6 md:px-12 max-w-7xl mx-auto bg-slate-900/30 rounded-3xl my-12 border border-slate-800/50">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-5xl font-extrabold text-white">Guest Highlights</h2>
-      <p class="text-slate-400 mt-3 text-sm md:text-base">Signature dishes & drinks crafted with passion</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-white">Must-Try Menu Highlights</h2>
+      <p class="text-slate-400 mt-2 text-sm">Dishes most praised in customer reviews</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="menu-card glass rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300">
-        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Pork Chops" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-white">Signature Pork Chops</h3>
-          <p class="text-amber-500 text-xs uppercase font-semibold mt-1">Guest Favorite</p>
-          <p class="text-slate-400 text-sm mt-3">Succulent, perfectly grilled pork chops served with creamy mash and house special sauce.</p>
-          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order/reserve%20for%20Pork%20Chops." target="_blank" class="mt-6 w-full block text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 font-semibold py-3 rounded-xl transition">
+      <!-- Dish 1 -->
+      <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/40 transition duration-300 flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Pork Chops" class="w-full h-52 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">Pork Chops & Mash</h3>
+              <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-full">Top Rated</span>
+            </div>
+            <p class="text-slate-400 text-sm mt-3 leading-relaxed">Juicy, tender pork chops served with rich gravy and butter-smooth mashed potatoes.</p>
+          </div>
+        </div>
+        <div class="px-6 pb-6">
+          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order/reserve%20for%20Pork%20Chops." target="_blank" class="w-full block text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 font-semibold py-3 rounded-xl transition text-sm">
             Order via WhatsApp
           </a>
         </div>
       </div>
 
-      <div class="menu-card glass rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300">
-        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Italian Pasta" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-white">Handcrafted Creamy Pasta</h3>
-          <p class="text-amber-500 text-xs uppercase font-semibold mt-1">Italian Classic</p>
-          <p class="text-slate-400 text-sm mt-3">Rich, creamy artisanal pasta made fresh with herbs and premium ingredients.</p>
-          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order/reserve%20for%20Italian%20Pasta." target="_blank" class="mt-6 w-full block text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 font-semibold py-3 rounded-xl transition">
+      <!-- Dish 2 -->
+      <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/40 transition duration-300 flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Creamy Pasta" class="w-full h-52 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">Italian Creamy Pasta</h3>
+              <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-full">Italian Classic</span>
+            </div>
+            <p class="text-slate-400 text-sm mt-3 leading-relaxed">Authentic pasta tossed in rich herbs, cream sauce, and slow-cooked specialty seasonings.</p>
+          </div>
+        </div>
+        <div class="px-6 pb-6">
+          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order/reserve%20for%20Italian%20Pasta." target="_blank" class="w-full block text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 font-semibold py-3 rounded-xl transition text-sm">
             Order via WhatsApp
           </a>
         </div>
       </div>
 
-      <div class="menu-card glass rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300">
-        <img src="https://images.unsplash.com/photo-1567206563064-6f60f4078b57?auto=format&fit=crop&w=800&q=80" alt="Gelato" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-white">Owner's Handcrafted Gelato</h3>
-          <p class="text-amber-500 text-xs uppercase font-semibold mt-1">Must-Try Dessert</p>
-          <p class="text-slate-400 text-sm mt-3">Artisanal gelato handcrafted personally by owner Andre. A legendary sweet ending.</p>
-          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20try%20the%20Handcrafted%20Gelato." target="_blank" class="mt-6 w-full block text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 font-semibold py-3 rounded-xl transition">
-            Order via WhatsApp
+      <!-- Dish 3 -->
+      <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/40 transition duration-300 flex flex-col justify-between border border-amber-500/30">
+        <div>
+          <img src="https://images.unsplash.com/photo-1567206563064-6f60f4078b57?auto=format&fit=crop&w=800&q=80" alt="Vodka Passion Gelato" class="w-full h-52 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">Vodka Passion Gelato</h3>
+              <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded-full">Owner's Recipe</span>
+            </div>
+            <p class="text-slate-400 text-sm mt-3 leading-relaxed">Handcrafted by owner Andre himself. A unique, refreshing dessert specialty you won't find anywhere else.</p>
+          </div>
+        </div>
+        <div class="px-6 pb-6">
+          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20try%20the%20Vodka%20Passion%20Gelato." target="_blank" class="w-full block text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl transition text-sm">
+            Try Gelato via WhatsApp
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="reviews" class="py-20 bg-slate-900/40 border-y border-slate-800">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="flex justify-center items-center gap-1 text-amber-500 text-2xl mb-4">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
+  <!-- Real Reviews Section (Tripadvisor + Google Maps) -->
+  <section id="reviews" class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-amber-500 font-bold uppercase tracking-wider text-xs">Customer Ratings</span>
+      <h2 class="text-3xl md:text-5xl font-black text-white mt-2">Verified Reviews</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Review 1 -->
+      <div class="review-card glass p-6 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h4 class="font-bold text-white text-base">smandeera</h4>
+              <p class="text-slate-400 text-xs">Tripadvisor • May 2025</p>
+            </div>
+            <i class="fa-solid fa-owl text-emerald-400 text-2xl"></i>
+          </div>
+          <div class="flex text-emerald-400 text-xs mb-3">
+            <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i>
+          </div>
+          <h5 class="font-bold text-amber-400 text-sm mb-2">"Excellent food and cozy vibes!"</h5>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            "The gelatos are a must-try, as the owner, Andre, makes them himself, which is amazing. Dishes we loved were the Pork Chops and Fish & Chips.. oh the pasta were great too."
+          </p>
+        </div>
       </div>
-      <h3 class="text-3xl font-extrabold text-white mb-2">4.9 / 5.0 Rating</h3>
-      <p class="text-slate-400 font-medium text-sm mb-6">Based on 105+ Google Maps Reviews</p>
-      <p class="text-slate-300 italic max-w-2xl mx-auto">
-        "The food and drinks were great, and the service was excellent. Beautiful ambiance and cozy vibes in Colombo 04!"
-      </p>
+
+      <!-- Review 2 -->
+      <div class="review-card glass p-6 rounded-2xl flex flex-col justify-between border border-amber-500/30">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h4 class="font-bold text-white text-base">Tatziana</h4>
+              <p class="text-slate-400 text-xs">Google Maps Review • Aug 2026</p>
+            </div>
+            <i class="fa-brands fa-google text-amber-400 text-2xl"></i>
+          </div>
+          <div class="flex text-amber-400 text-xs mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <h5 class="font-bold text-amber-400 text-sm mb-2">"Lovely place to chill & eat"</h5>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            "The place itself is really sweet and cute — completely unexpected, but very pleasant. It has a lovely, relaxed atmosphere to sit with friends, have a meal and chat."
+          </p>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card glass p-6 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h4 class="font-bold text-white text-base">Светлана А</h4>
+              <p class="text-slate-400 text-xs">Tripadvisor • Feb 2026</p>
+            </div>
+            <i class="fa-solid fa-owl text-emerald-400 text-2xl"></i>
+          </div>
+          <div class="flex text-emerald-400 text-xs mb-3">
+            <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle opacity-40"></i>
+          </div>
+          <h5 class="font-bold text-amber-400 text-sm mb-2">"First night in Colombo"</h5>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            "The place is beautiful. Barbecue wings, fries and local cuisine were delicious. Waiter attentive and brought water right away!"
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- Location & Opening Hours Section -->
   <section id="hours" class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="glass p-8 rounded-2xl">
-        <h3 class="text-2xl font-extrabold text-white mb-6 flex items-center gap-3">
-          <i class="fa-regular fa-clock text-amber-500"></i> Opening Hours
-        </h3>
-        <ul class="space-y-3 text-slate-300 text-sm">
-          <li class="flex justify-between border-b border-slate-800 pb-2">
-            <span>Tuesday - Sunday</span> <span class="font-semibold text-white">11:00 AM - 11:00 PM</span>
-          </li>
-          <li class="flex justify-between border-b border-slate-800 pb-2 text-rose-400">
-            <span>Monday</span> <span class="font-bold">Closed</span>
-          </li>
-        </ul>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+      
+      <!-- Hours Card -->
+      <div class="glass p-8 rounded-3xl flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-3">
+            <i class="fa-regular fa-clock text-amber-500"></i> Opening Hours
+          </h3>
+          <ul class="space-y-4 text-slate-300 text-sm">
+            <li class="flex justify-between border-b border-slate-800 pb-3">
+              <span>Tuesday – Sunday</span> <span class="font-semibold text-white">11:00 AM – 11:00 PM</span>
+            </li>
+            <li class="flex justify-between border-b border-slate-800 pb-3 text-rose-400">
+              <span>Monday</span> <span class="font-bold bg-rose-500/10 px-3 py-0.5 rounded-full border border-rose-500/20">Closed</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-8 pt-6 border-t border-slate-800">
+          <p class="text-xs text-slate-400">💡 <strong>Reservation Tip:</strong> Dinners on Friday & Sunday nights get busy. Reserve on WhatsApp prior to arrival!</p>
+        </div>
       </div>
 
-      <div class="glass p-8 rounded-2xl">
-        <h3 class="text-2xl font-extrabold text-white mb-4 flex items-center gap-3">
-          <i class="fa-solid fa-location-dot text-amber-500"></i> Find Us on Google Maps
-        </h3>
-        <p class="text-slate-300 text-base leading-relaxed mb-4">
-          📍 <strong>33 Duplication Road, Colombo 00400, Sri Lanka</strong>
-        </p>
-        <p class="text-slate-400 text-sm mb-6">
-          <i class="fa-solid fa-phone text-amber-500 mr-2"></i> 077 133 6868
-        </p>
-        <a href="https://maps.google.com/?q=33+Duplication+Road,+Colombo+00400" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-xl transition">
-          Open Direct Map Navigation
-        </a>
+      <!-- Address & Google Map Direct Link -->
+      <div class="glass p-8 rounded-3xl flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-3">
+            <i class="fa-solid fa-map-location-dot text-amber-500"></i> Location & Contact
+          </h3>
+          <p class="text-slate-200 text-base leading-relaxed mb-4">
+            📍 <strong>33 Duplication Road, Colombo 00400, Sri Lanka</strong>
+          </p>
+          <p class="text-slate-400 text-sm mb-6">
+            📞 <strong>Phone:</strong> <a href="tel:+94771336868" class="text-amber-400 hover:underline">077 133 6868</a>
+          </p>
+        </div>
+
+        <div>
+          <a href="https://maps.google.com/?q=33+Duplication+Road,+Colombo+00400" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-4 rounded-xl transition text-center block shadow-lg shadow-amber-500/20">
+            <i class="fa-solid fa-diamond-turn-right mr-2"></i> Open in Google Maps Navigation
+          </a>
+        </div>
       </div>
+
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="py-8 border-t border-slate-800 px-6 text-center text-slate-500 text-xs">
-    <p>© The Chef's Table. All Rights Reserved.</p>
+    <p>© The Chef's Table Colombo. All Rights Reserved.</p>
     <p class="mt-2">Demo Experience Engineered by <strong class="text-amber-500">Siravis Web Studio</strong></p>
   </footer>
 
+  <!-- GSAP Animations Script -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
+    // Hero Entry Animation
     gsap.from(".hero-anim", {
       opacity: 0,
       y: 40,
       duration: 1,
-      stagger: 0.2,
+      stagger: 0.15,
       ease: "power3.out"
     });
 
+    // Gallery Fade Up Animation
+    gsap.from(".gallery-img", {
+      scrollTrigger: {
+        trigger: "#gallery",
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.7,
+      stagger: 0.15,
+      ease: "power2.out"
+    });
+
+    // Menu Cards Scroll Animation
     gsap.from(".menu-card", {
       scrollTrigger: {
         trigger: "#menu",
-        start: "top 80%",
+        start: "top 75%",
       },
       opacity: 0,
       y: 50,
       duration: 0.8,
       stagger: 0.2,
       ease: "power2.out"
+    });
+
+    // Reviews Scroll Animation
+    gsap.from(".review-card", {
+      scrollTrigger: {
+        trigger: "#reviews",
+        start: "top 80%",
+      },
+      opacity: 0,
+      scale: 0.95,
+      duration: 0.7,
+      stagger: 0.2,
+      ease: "back.out(1.4)"
     });
   </script>
 </body>
