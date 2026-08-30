@@ -15,9 +15,9 @@
 
   <style>
     .glass {
-      background: rgba(15, 23, 42, 0.82);
+      background: rgba(15, 23, 42, 0.85);
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     .glass-card {
       background: rgba(30, 41, 59, 0.6);
@@ -27,7 +27,6 @@
     .text-glow {
       text-shadow: 0 0 25px rgba(245, 158, 11, 0.35);
     }
-    /* Custom Green Color Matching Brand Logo */
     .bg-brand-green {
       background-color: #0D2F1D;
     }
@@ -38,17 +37,16 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
 
-  <!-- Navigation Bar -->
+  <!-- Navigation Bar (Logo Size Enlarged) -->
   <nav class="fixed top-0 left-0 w-full z-50 glass py-3 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
-    <a href="#" class="flex items-center gap-3 group">
-      <!-- High Quality Instagram Logo Placeholder (Local Path / Base64 compatible) -->
-      <div class="relative w-11 h-11 rounded-full bg-brand-green p-0.5 border-2 border-amber-500/60 shadow-md shadow-emerald-950/50 flex items-center justify-center overflow-hidden group-hover:scale-105 transition">
-        <!-- Replace 'images/logo.png' with your downloaded Instagram logo file path -->
-        <img src="https://scontent.cdninstagram.com/v/t51.75761-19/503002345_17845840224491549_6783888296526881892_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=101&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=8F9TbAFzhG8Q7kNvwGSjWwU&_nc_oc=AdpnzbCp3FL3fq2lGYAG30snMrQCQCTmCOM859tYRxsYXhwWZlBkXx78v2DYz6wNc-T8lZMMbKkw1vDOjZyCvjhJ&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=GpVaz_ufCEty-Q5CbWQ_GA&_nc_ss=7b689&oh=00_AQJOos-Uy7LGa6SGAvAPH_3R0KMedcctPJPrdROsJ2i1TQ&oe=6A9A4856" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=150&q=80';" alt="The Chef's Table Logo" class="w-full h-full object-cover rounded-full">
+    <a href="#" class="flex items-center gap-4 group">
+      <!-- Enlarged Logo Container (w-14 h-14 for mobile, w-16 h-16 for desktop) -->
+      <div class="relative w-14 md:w-16 h-14 md:h-16 rounded-full bg-brand-green p-0.5 border-2 border-amber-500 shadow-lg shadow-emerald-950/80 flex items-center justify-center overflow-hidden group-hover:scale-105 transition shrink-0">
+        <img src="images/logo.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=150&q=80';" alt="The Chef's Table Logo" class="w-full h-full object-cover rounded-full">
       </div>
       <div>
-        <span class="text-lg md:text-xl font-black tracking-wider text-amber-500 uppercase block leading-none">THE CHEF'S TABLE</span>
-        <span class="text-[10px] tracking-widest text-slate-400 uppercase font-semibold">Colombo 04 • Fine Dining</span>
+        <span class="text-lg md:text-2xl font-black tracking-wider text-amber-500 uppercase block leading-none">THE CHEF'S TABLE</span>
+        <span class="text-[10px] md:text-xs tracking-widest text-slate-400 uppercase font-semibold">Colombo 04 • Fine Dining</span>
       </div>
     </a>
     <div class="hidden md:flex space-x-8 font-medium text-slate-300 text-sm">
@@ -64,7 +62,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center pt-28 pb-16 px-6 relative overflow-hidden">
+  <section class="min-h-screen flex items-center justify-center pt-32 pb-16 px-6 relative overflow-hidden">
     <!-- Dark Overlay Gradient -->
     <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/60 z-10"></div>
     <!-- Background Image -->
@@ -74,7 +72,7 @@
       <!-- Main Brand Logo Display in Hero -->
       <div class="hero-anim mb-6 flex justify-center md:justify-start">
         <div class="flex items-center gap-3 bg-slate-900/80 border border-emerald-500/30 px-4 py-2 rounded-full backdrop-blur-md">
-          <img src="https://scontent.cdninstagram.com/v/t51.75761-19/503002345_17845840224491549_6783888296526881892_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=101&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=8F9TbAFzhG8Q7kNvwGSjWwU&_nc_oc=AdpnzbCp3FL3fq2lGYAG30snMrQCQCTmCOM859tYRxsYXhwWZlBkXx78v2DYz6wNc-T8lZMMbKkw1vDOjZyCvjhJ&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=GpVaz_ufCEty-Q5CbWQ_GA&_nc_ss=7b689&oh=00_AQJOos-Uy7LGa6SGAvAPH_3R0KMedcctPJPrdROsJ2i1TQ&oe=6A9A4856" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=150&q=80';" alt="Logo Icon" class="w-8 h-8 rounded-full border border-amber-500/40 object-cover">
+          <img src="images/logo.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=150&q=80';" alt="Logo Icon" class="w-8 h-8 rounded-full border border-amber-500/40 object-cover">
           <span class="text-amber-400 font-bold text-xs tracking-wide">The Newest Food Destination in Colombo</span>
         </div>
       </div>
@@ -121,7 +119,7 @@
     </div>
   </section>
 
-  <!-- Section: Official Instagram Menu Specials (From Screenshot) -->
+  <!-- Section: Official Instagram Menu Specials -->
   <section id="specials" class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
     <div class="text-center mb-16">
       <div class="flex items-center justify-center gap-2 mb-2">
@@ -133,8 +131,7 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <!-- Item 1: Baked Crab (From Insta Screenshot) -->
+      <!-- Item 1: Baked Crab -->
       <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
         <div>
           <div class="relative overflow-hidden h-64">
@@ -160,7 +157,7 @@
         </div>
       </div>
 
-      <!-- Item 2: Live Music Vibe (From Insta Middle Screenshot) -->
+      <!-- Item 2: Live Music Vibe -->
       <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between border border-amber-500/30 group">
         <div>
           <div class="relative overflow-hidden h-64">
@@ -183,7 +180,7 @@
         </div>
       </div>
 
-      <!-- Item 3: Risotto (From Insta Screenshot) -->
+      <!-- Item 3: Risotto -->
       <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
         <div>
           <div class="relative overflow-hidden h-64">
@@ -208,7 +205,6 @@
           </a>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -220,7 +216,6 @@
       <p class="text-slate-400 mt-2 text-sm">Capture of our house-made gelato and cozy Colombo 04 dining space</p>
     </div>
 
-    <!-- Image Grid -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div class="gallery-img glass rounded-2xl overflow-hidden h-60 group relative cursor-pointer">
         <img src="images/food-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80';" alt="Pork Chop & Mash" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
@@ -252,7 +247,7 @@
     </div>
   </section>
 
-  <!-- Real Reviews Section (Tripadvisor + Google Maps) -->
+  <!-- Real Reviews Section -->
   <section id="reviews" class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
     <div class="text-center mb-16">
       <span class="text-amber-500 font-bold uppercase tracking-wider text-xs">Customer Ratings</span>
@@ -260,8 +255,6 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      
-      <!-- Review 1 -->
       <div class="review-card glass p-6 rounded-2xl flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-4">
@@ -281,7 +274,6 @@
         </div>
       </div>
 
-      <!-- Review 2 -->
       <div class="review-card glass p-6 rounded-2xl flex flex-col justify-between border border-amber-500/30">
         <div>
           <div class="flex items-center justify-between mb-4">
@@ -301,7 +293,6 @@
         </div>
       </div>
 
-      <!-- Review 3 -->
       <div class="review-card glass p-6 rounded-2xl flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-4">
@@ -320,15 +311,12 @@
           </p>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- Location & Opening Hours Section -->
   <section id="hours" class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-      
-      <!-- Hours Card -->
       <div class="glass p-8 rounded-3xl flex flex-col justify-between">
         <div>
           <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-3">
@@ -348,7 +336,6 @@
         </div>
       </div>
 
-      <!-- Address & Google Map Direct Link -->
       <div class="glass p-8 rounded-3xl flex flex-col justify-between">
         <div>
           <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-3">
@@ -368,7 +355,6 @@
           </a>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -386,7 +372,6 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero Entry Animation
     gsap.from(".hero-anim", {
       opacity: 0,
       y: 40,
@@ -395,7 +380,6 @@
       ease: "power3.out"
     });
 
-    // Gallery Fade Up Animation
     gsap.from(".gallery-img", {
       scrollTrigger: {
         trigger: "#gallery",
@@ -408,7 +392,6 @@
       ease: "power2.out"
     });
 
-    // Menu Cards Scroll Animation
     gsap.from(".menu-card", {
       scrollTrigger: {
         trigger: "#specials",
@@ -421,7 +404,6 @@
       ease: "power2.out"
     });
 
-    // Reviews Scroll Animation
     gsap.from(".review-card", {
       scrollTrigger: {
         trigger: "#reviews",
