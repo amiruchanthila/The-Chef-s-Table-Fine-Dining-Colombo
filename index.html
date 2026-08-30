@@ -60,7 +60,7 @@
     </a>
   </nav>
 
-  <!-- Hero Section -->
+ <!-- Hero Section -->
   <section class="min-h-screen flex items-center justify-center pt-28 pb-16 px-6 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/60 z-10"></div>
     <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80" alt="The Chef's Table Ambiance" class="absolute inset-0 w-full h-full object-cover">
@@ -200,10 +200,18 @@
     </div>
   </section>
 
+  <!-- Footer Section -->
+  <footer class="glass py-8 border-t border-slate-800 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>© 2026 The Chef's Table Colombo. All rights reserved.</p>
+    </div>
+  </footer>
+
   <!-- Mobile-Safe GSAP Animation Script -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
+    // Initial Hero Animation
     gsap.from(".hero-anim", {
       opacity: 0,
       y: 20,
@@ -212,14 +220,25 @@
       ease: "power2.out"
     });
 
-    // Mobile Friendly ScrollTrigger configuration
-    ScrollTrigger.batch(".menu-card", {
-      start: "top 95%",
-      onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
-      once: true
+    // Mobile Viewport Fixed ScrollTrigger
+    gsap.utils.toArray(".menu-card").forEach((card) => {
+      gsap.fromTo(card, 
+        { opacity: 0, y: 40 }, 
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%", // Mobile screen එකට එද්දිම trigger වෙනවා
+            toggleActions: "play none none none"
+          }
+        }
+      );
     });
 
-    // Fallback: If elements stay invisible on mobile viewport height changes, force show them
+    // Mobile Height Resize Glitch Fix
     window.addEventListener("load", () => {
       ScrollTrigger.refresh();
     });
