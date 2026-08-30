@@ -34,16 +34,15 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
 
-  <!-- Navigation Bar (Mobile Optimized Header) -->
+  <!-- Mobile-Optimized Fixed Navbar -->
   <nav class="fixed top-0 left-0 w-full z-50 glass py-2.5 px-4 md:px-12 flex justify-between items-center transition-all duration-300">
     <a href="#" class="flex items-center gap-2.5 md:gap-4 min-w-0">
-      <!-- Responsive Logo Size -->
-      <div class="relative w-11 h-11 md:w-16 md:h-16 rounded-full bg-brand-green p-0.5 border-2 border-amber-500 shadow-lg shadow-emerald-950/80 flex items-center justify-center overflow-hidden shrink-0">
+      <div class="relative w-10 h-10 md:w-16 md:h-16 rounded-full bg-brand-green p-0.5 border-2 border-amber-500 shadow-lg flex items-center justify-center overflow-hidden shrink-0">
         <img src="images/logo.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=150&q=80';" alt="The Chef's Table Logo" class="w-full h-full object-cover rounded-full">
       </div>
       <div class="truncate">
-        <span class="text-sm sm:text-lg md:text-2xl font-black tracking-wider text-amber-500 uppercase block leading-tight truncate">THE CHEF'S TABLE</span>
-        <span class="text-[9px] sm:text-[10px] md:text-xs tracking-wider text-slate-400 uppercase font-semibold block leading-tight truncate">Colombo 04 • Fine Dining</span>
+        <span class="text-xs sm:text-base md:text-2xl font-black tracking-wider text-amber-500 uppercase block leading-tight truncate">THE CHEF'S TABLE</span>
+        <span class="text-[8px] sm:text-[10px] md:text-xs tracking-wider text-slate-400 uppercase font-semibold block leading-tight truncate">Colombo 04 • Fine Dining</span>
       </div>
     </a>
 
@@ -55,12 +54,12 @@
       <a href="#hours" class="hover:text-amber-500 transition">Location</a>
     </div>
 
-    <a href="https://wa.me/94771336868?text=Hi!%20I%20would%20like%20to%20reserve%20a%20table%20at%20The%20Chef's%20Table." target="_blank" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3.5 py-2 md:px-5 md:py-2.5 rounded-full transition shadow-lg shadow-amber-500/20 text-xs md:text-sm flex items-center gap-1.5 shrink-0">
+    <a href="https://wa.me/94771336868?text=Hi!%20I%20would%20like%20to%20reserve%20a%20table%20at%20The%20Chef's%20Table." target="_blank" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 md:px-5 md:py-2.5 rounded-full transition shadow-lg text-xs md:text-sm flex items-center gap-1.5 shrink-0">
       <i class="fa-brands fa-whatsapp text-sm md:text-base"></i> <span class="hidden sm:inline">Reserve Table</span><span class="sm:hidden">Reserve</span>
     </a>
   </nav>
 
- <!-- Hero Section -->
+  <!-- Hero Section -->
   <section class="min-h-screen flex items-center justify-center pt-28 pb-16 px-6 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/60 z-10"></div>
     <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80" alt="The Chef's Table Ambiance" class="absolute inset-0 w-full h-full object-cover">
@@ -199,15 +198,69 @@
       </div>
     </div>
   </section>
+  <!-- About & Features Section -->
+  <section id="about" class="py-16 bg-slate-900/50 border-y border-slate-800/80 px-4 sm:px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-amber-500 font-bold uppercase tracking-wider text-xs block mb-2">Crafted With Passion</span>
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-6">Fine Food & Unmatched Cozy Ambiance</h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Located right at Duplication Road, Colombo 04, <strong>The Chef's Table</strong> brings you artisanal culinary creations prepared with premium ingredients.
+        </p>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          Whether you're stopping by for our famous house-made specialty Gelato by owner Andre, indulging in oven-baked crabs, or enjoying BYOB drinks with live guitar acoustic music, we offer an unforgettable vibe.
+        </p>
+        <div class="grid grid-cols-2 gap-4 text-xs font-semibold text-slate-200">
+          <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Artisanal Wood-fired Pizza</div>
+          <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> House-made Italian Gelato</div>
+          <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> BYOB (Bring Your Own Bottle)</div>
+          <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Live Acoustic Music Sessions</div>
+        </div>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden glass-card p-2 border border-slate-700">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="w-full h-80 object-cover rounded-xl">
+      </div>
+    </div>
+  </section>
 
-  <!-- Footer Section -->
+  <!-- Location & Operating Hours Section -->
+  <section id="hours" class="py-16 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="glass-card p-6 sm:p-8 rounded-2xl border border-slate-800">
+        <h3 class="text-2xl font-black text-white mb-4">Visit Us & Hours</h3>
+        <p class="text-slate-300 text-sm mb-6"><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i> 33 Duplication Rd, Colombo 04, Sri Lanka</p>
+
+        <div class="space-y-3 text-xs sm:text-sm text-slate-300 mb-8">
+          <div class="flex justify-between border-b border-slate-800 pb-2">
+            <span>Monday - Thursday</span>
+            <span class="font-bold text-amber-400">12:00 PM - 10:30 PM</span>
+          </div>
+          <div class="flex justify-between border-b border-slate-800 pb-2">
+            <span>Friday - Sunday</span>
+            <span class="font-bold text-amber-400">12:00 PM - 11:30 PM</span>
+          </div>
+        </div>
+
+        <a href="https://wa.me/94771336868" target="_blank" class="w-full text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Reserve via WhatsApp (077 133 6868)
+        </a>
+      </div>
+
+      <!-- Embedded Google Map -->
+      <div class="rounded-2xl overflow-hidden glass-card h-80 border border-slate-800">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.97825595568!2d79.8550266!3d6.8932147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596000000001%3A0x8898b3f2c3d5e9b8!2sDuplication%20Rd%2C%20Colombo!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="glass py-8 border-t border-slate-800 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4">
       <p>© 2026 The Chef's Table Colombo. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Mobile-Safe GSAP Animation Script -->
+  <!-- GSAP Animation Script -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
@@ -223,7 +276,7 @@
     // Mobile Viewport Fixed ScrollTrigger
     gsap.utils.toArray(".menu-card").forEach((card) => {
       gsap.fromTo(card, 
-        { opacity: 0, y: 40 }, 
+        { opacity: 0, y: 30 }, 
         {
           opacity: 1,
           y: 0,
@@ -231,7 +284,7 @@
           ease: "power2.out",
           scrollTrigger: {
             trigger: card,
-            start: "top 90%", // Mobile screen එකට එද්දිම trigger වෙනවා
+            start: "top 90%", // Mobile screen එකට එද්දිම animate වෙනවා
             toggleActions: "play none none none"
           }
         }
