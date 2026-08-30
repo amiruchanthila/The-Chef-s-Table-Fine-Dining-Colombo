@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Chef's Table | Fine Dining, Handcrafted Gelato & BYOB Colombo 04</title>
+  <title>The Chef's Table | Fine Dining, Handcrafted Gelato & BYOB Colombo</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -30,6 +30,16 @@
     .bg-brand-green {
       background-color: #0D2F1D;
     }
+    /* Auto Carousel Styling */
+    .carousel-slides {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+    .dot.active {
+      background-color: #f59e0b;
+      width: 24px;
+      border-radius: 9999px;
+    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
@@ -37,19 +47,20 @@
   <!-- Mobile & Desktop Navigation Bar -->
   <nav class="fixed top-0 left-0 w-full z-50 glass py-2.5 px-4 md:px-12 flex justify-between items-center transition-all duration-300">
     <a href="#" class="flex items-center gap-3 group shrink-0">
-      <!-- Enlarged Logo Container -->
       <div class="relative w-14 h-14 md:w-20 md:h-20 rounded-full bg-brand-green p-0.5 border-2 border-amber-500 shadow-xl flex items-center justify-center overflow-hidden group-hover:scale-105 transition">
         <img src="images/logo.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=150&q=80';" alt="The Chef's Table Logo" class="w-full h-full object-cover rounded-full">
       </div>
       <div class="min-w-0">
         <span class="text-sm sm:text-base md:text-xl font-black tracking-wider text-amber-500 uppercase block leading-tight truncate">THE CHEF'S TABLE</span>
-        <span class="text-[9px] sm:text-[10px] md:text-xs tracking-widest text-slate-400 uppercase font-semibold block leading-tight truncate">Colombo 04 • Fine Dining</span>
+        <span class="text-[9px] sm:text-[10px] md:text-xs tracking-widest text-slate-400 uppercase font-semibold block leading-tight truncate">Colombo 03 • Fine Dining</span>
       </div>
     </a>
 
+    <!-- Fixed About Us Link -->
     <div class="hidden md:flex space-x-8 font-medium text-slate-300 text-sm">
       <a href="#about" class="hover:text-amber-500 transition">About Us</a>
       <a href="#specials" class="hover:text-amber-500 transition">Insta Specials</a>
+      <a href="#menu-carousel" class="hover:text-amber-500 transition">Full Menu Ads</a>
       <a href="#gallery" class="hover:text-amber-500 transition">Live Vibe & Food</a>
       <a href="#reviews" class="hover:text-amber-500 transition">Reviews</a>
       <a href="#hours" class="hover:text-amber-500 transition">Location</a>
@@ -66,11 +77,10 @@
     <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80" alt="The Chef's Table Ambiance" class="absolute inset-0 w-full h-full object-cover">
 
     <div class="relative z-20 max-w-5xl mx-auto w-full text-center md:text-left">
-      <!-- Enlarged Icon Badge -->
       <div class="hero-anim mb-4 sm:mb-6 flex justify-center md:justify-start">
         <div class="flex items-center gap-3 bg-slate-900/80 border border-emerald-500/30 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full backdrop-blur-md">
           <img src="images/logo.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=150&q=80';" alt="Logo Icon" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-amber-500/40 object-cover">
-          <span class="text-amber-400 font-bold text-[11px] sm:text-xs tracking-wide">The Newest Food Destination in Colombo</span>
+          <span class="text-amber-400 font-bold text-[11px] sm:text-xs tracking-wide">The Premier Culinary Destination in Colombo 03</span>
         </div>
       </div>
 
@@ -87,17 +97,17 @@
       </div>
 
       <h1 class="hero-anim text-3xl sm:text-6xl md:text-7xl font-black leading-tight text-white tracking-tight">
-        Fresh Pizza, Artisanal Food & <br class="hidden sm:inline"/>
+        Chef's Specials, Thai Delicacies & <br class="hidden sm:inline"/>
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-glow">House-Made Gelato</span>
       </h1>
       
       <p class="hero-anim text-slate-300 text-sm sm:text-xl mt-4 sm:mt-6 max-w-2xl font-light leading-relaxed">
-        Experience exquisite fine dining & cozy acoustic vibes at Duplication Road. Famous for <strong>Baked Crab</strong>, creamy <strong>Risotto</strong>, juicy <strong>Pork Chops</strong>, and owner Andre’s handcrafted specialty Gelato.
+        Experience exquisite fine dining & cozy acoustic vibes at Walukarama Road. Famous for <strong>Nasi Goreng</strong>, creamy <strong>Thai Green Curry</strong>, <strong>Pork Chops</strong>, and handcrafted specialty Gelato.
       </p>
       
       <div class="hero-anim flex flex-wrap gap-3 sm:gap-4 mt-6 justify-center md:justify-start text-xs text-slate-400 font-medium">
-        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> 33 Duplication Rd, Colombo 04</span>
-        <span><i class="fa-solid fa-tag text-amber-500 mr-1.5"></i> 2,300 - 3,200 LKR Specials</span>
+        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> 19 Walukarama Rd, Colombo 03</span>
+        <span><i class="fa-solid fa-clock text-amber-500 mr-1.5"></i> 11:00 AM - 11:00 PM</span>
         <span><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Dine-in • Takeaway • Live Music</span>
       </div>
 
@@ -106,9 +116,136 @@
           <i class="fa-brands fa-whatsapp text-lg"></i> Join the Table (WhatsApp)
         </a>
         <a href="tel:+94771336868" class="glass hover:bg-white/10 text-white font-bold px-6 py-3.5 sm:py-4 rounded-xl text-center transition flex items-center justify-center gap-2 text-sm md:text-base">
-          <i class="fa-solid fa-phone text-amber-500"></i> 077 133 6868
+          <i class="fa-solid fa-phone text-amber-500"></i> 077 133 68 68
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: About Us Section (Fixed Button Target) -->
+  <section id="about" class="py-16 sm:py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
+    <div class="glass-card rounded-3xl p-6 sm:p-10 border border-amber-500/20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="text-amber-500 font-bold uppercase tracking-wider text-xs block mb-2">Our Culinary Story</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">Welcome to The Chef's Table</h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Located in the heart of Colombo 03 at 19 Walukarama Road, <strong>The Chef's Table</strong> brings together a passion for handcrafted fine dining, vibrant Southeast Asian flavors, and cozy acoustic ambiance.
+        </p>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          Whether you are craving our signature Chef’s Special Nasi Goreng, authentic Thai Green Curry, or handcrafted Gelato made in-house by owner Andre, every dish is crafted with fresh, premium ingredients. Bring your favorite bottle along—we are proudly BYOB friendly!
+        </p>
+        <div class="flex flex-wrap gap-4 text-xs font-semibold text-amber-400">
+          <div class="bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-700"><i class="fa-solid fa-utensils mr-1.5"></i> Chef's Specials</div>
+          <div class="bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-700"><i class="fa-solid fa-ice-cream mr-1.5"></i> Artisanal Gelato</div>
+          <div class="bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-700"><i class="fa-solid fa-wine-bottle mr-1.5"></i> BYOB Policy</div>
+        </div>
+      </div>
+      <div class="relative h-64 sm:h-80 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-4 right-4 text-center bg-slate-950/80 backdrop-blur-md py-2.5 px-4 rounded-xl border border-amber-500/30">
+          <span class="text-amber-400 text-xs font-bold">19 Walukarama Road, Colombo 03 • 11 AM to 11 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto-Sliding Menu Ad Banner Section -->
+  <section id="menu-carousel" class="py-12 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto">
+    <div class="text-center mb-8">
+      <span class="text-amber-500 font-bold uppercase tracking-wider text-xs">Featured Highlights</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white mt-1">Weekend Specials Carousel</h2>
+      <p class="text-slate-400 text-xs mt-1">Auto-switching dynamic menu ads (Hover to pause)</p>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="relative overflow-hidden rounded-3xl glass-card border border-amber-500/30 shadow-2xl max-w-4xl mx-auto" id="carousel">
+      <div class="carousel-slides" id="slides">
+        
+        <!-- Slide 1: Thai Chicken Fried Rice -->
+        <div class="min-w-full p-6 sm:p-10 flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-emerald-950/80 to-slate-900">
+          <div class="w-full md:w-1/2 text-left">
+            <span class="bg-amber-500 text-slate-950 font-black text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider">Chef's Special</span>
+            <h3 class="text-2xl sm:text-4xl font-black text-white mt-3">Thai Chicken Fried Rice</h3>
+            <p class="text-amber-400 font-bold text-xl sm:text-2xl my-2">Rs. 1,490/=</p>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+              Smoky Indonesian fried rice with chicken & prawns, sweet soy, garlic, and chili. Topped with a crispy egg, pickles & crackers — bold flavour in every bite.
+            </p>
+            <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order%20Thai%20Chicken%20Fried%20Rice." target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm">
+              Order Special Now
+            </a>
+          </div>
+          <div class="w-full md:w-1/2 h-56 sm:h-64 rounded-2xl overflow-hidden border border-emerald-500/30">
+            <img src="images/thai-chicken-fried-rice.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80';" alt="Thai Chicken Fried Rice" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Slide 2: Nasi Goreng -->
+        <div class="min-w-full p-6 sm:p-10 flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-emerald-950/80 to-slate-900">
+          <div class="w-full md:w-1/2 text-left">
+            <span class="bg-amber-500 text-slate-950 font-black text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider">Chef's Special</span>
+            <h3 class="text-2xl sm:text-4xl font-black text-white mt-3">Special Nasi Goreng</h3>
+            <p class="text-amber-400 font-bold text-xl sm:text-2xl my-2">Rs. 1,800/=</p>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+              Indonesian-style fried rice loaded with chicken and prawns, stir-fried with garlic, chili, and sweet soy. Served with crispy egg, chicken skewers, and prawn crackers.
+            </p>
+            <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order%20Nasi%20Goreng." target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm">
+              Order Nasi Goreng
+            </a>
+          </div>
+          <div class="w-full md:w-1/2 h-56 sm:h-64 rounded-2xl overflow-hidden border border-emerald-500/30">
+            <img src="images/nasi-goreng.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80';" alt="Nasi Goreng" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Slide 3: Thai Green Curry -->
+        <div class="min-w-full p-6 sm:p-10 flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-emerald-950/80 to-slate-900">
+          <div class="w-full md:w-1/2 text-left">
+            <span class="bg-amber-500 text-slate-950 font-black text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider">Weekend Craving</span>
+            <h3 class="text-2xl sm:text-4xl font-black text-white mt-3">Chicken Thai Green Curry</h3>
+            <p class="text-amber-400 font-bold text-xl sm:text-2xl my-2">Rs. 2,200/=</p>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+              Tender chicken in a creamy Thai green curry, loaded with herbs and a hint of heat — paired with fluffy rice. (Prawn option available for LKR 2,400).
+            </p>
+            <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order%20Thai%20Green%20Curry." target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm">
+              Order Green Curry
+            </a>
+          </div>
+          <div class="w-full md:w-1/2 h-56 sm:h-64 rounded-2xl overflow-hidden border border-emerald-500/30">
+            <img src="images/thai-green-curry.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=80';" alt="Thai Green Curry" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Slide 4: Gelato S'more -->
+        <div class="min-w-full p-6 sm:p-10 flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-emerald-950/80 to-slate-900">
+          <div class="w-full md:w-1/2 text-left">
+            <span class="bg-rose-500 text-white font-black text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider">New Addition</span>
+            <h3 class="text-2xl sm:text-4xl font-black text-white mt-3">Chocolate Gelato S'more</h3>
+            <p class="text-amber-400 font-bold text-xl sm:text-2xl my-2">LKR 1,200</p>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+              House-made rich chocolate gelato topped with toasted marshmallow cream, chocolate drizzle, and crunchy cookie crumbs.
+            </p>
+            <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order%20Chocolate%20Gelato%20S'more." target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm">
+              Try This Dessert
+            </a>
+          </div>
+          <div class="w-full md:w-1/2 h-56 sm:h-64 rounded-2xl overflow-hidden border border-amber-500/30">
+            <img src="images/gelato-smore.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1567206563064-6f60f4078b57?auto=format&fit=crop&w=800&q=80';" alt="Chocolate Gelato Smore" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-slate-950/70 hover:bg-amber-500 hover:text-slate-950 text-white w-10 h-10 rounded-full flex items-center justify-center transition border border-slate-700">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-slate-950/70 hover:bg-amber-500 hover:text-slate-950 text-white w-10 h-10 rounded-full flex items-center justify-center transition border border-slate-700">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots -->
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" id="indicators"></div>
     </div>
   </section>
 
@@ -120,31 +257,28 @@
         <span class="text-amber-500 font-bold uppercase tracking-wider text-xs">Featured On Instagram</span>
       </div>
       <h2 class="text-3xl md:text-5xl font-black text-white">Chef's Signature Dishes</h2>
-      <p class="text-slate-400 mt-2 text-xs sm:text-sm">Directly from our official kitchen menu (@thechefstablecolombo)</p>
+      <p class="text-slate-400 mt-2 text-xs sm:text-sm">Directly from our official kitchen menu (@thechefstablecmb)</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-      <!-- Item 1: Baked Crab -->
+      <!-- Item 1: Thai Green Curry -->
       <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
         <div>
           <div class="relative overflow-hidden h-56 sm:h-64">
-            <img src="images/baked-crab.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';" alt="Baked Crab" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="images/thai-green-curry.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=80';" alt="Thai Green Curry" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute top-4 right-4 bg-amber-500 text-slate-950 font-black text-xs px-3 py-1.5 rounded-full shadow-lg">
-              3,200 LKR
-            </span>
-            <span class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-md text-amber-400 text-[11px] font-semibold px-2.5 py-1 rounded-md border border-amber-500/30">
-              Untill 30th August
+              2,200 LKR
             </span>
           </div>
           <div class="p-5 sm:p-6">
-            <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Baked Crab</h3>
+            <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Thai Green Curry</h3>
             <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Fresh crab, garlic butter, creamy cheese and fragrant herbs, oven-baked to golden perfection. Served with crispy potato wedges.
+              A fragrant Thai classic made with coconut milk base, tender chicken/prawn, chili, herbs, spices, and Thai basil. Served with fluffy rice.
             </p>
           </div>
         </div>
         <div class="px-5 sm:px-6 pb-5 sm:pb-6">
-          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order/reserve%20for%20Baked%20Crab." target="_blank" class="w-full block text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 font-bold py-3 rounded-xl transition text-xs sm:text-sm">
+          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order%20Thai%20Green%20Curry." target="_blank" class="w-full block text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 font-bold py-3 rounded-xl transition text-xs sm:text-sm">
             Order via WhatsApp
           </a>
         </div>
@@ -154,7 +288,7 @@
       <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between border border-amber-500/30 group">
         <div>
           <div class="relative overflow-hidden h-56 sm:h-64">
-            <img src="images/acoustic-vibe.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80';" alt="Acoustic Live Music" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Acoustic Live Music" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute top-4 right-4 bg-emerald-500 text-slate-950 font-black text-xs px-3 py-1.5 rounded-full shadow-lg">
               Live Experience
             </span>
@@ -162,7 +296,7 @@
           <div class="p-5 sm:p-6">
             <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Acoustic & BYOB Nights</h3>
             <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Enjoy live acoustic guitar music, soothing ambient lighting, and bring your own bottle (BYOB) for the ultimate dining evening with friends.
+              Enjoy live acoustic music, soothing ambient lighting, and bring your own bottle (BYOB) for the ultimate dining evening with friends in Colombo 03.
             </p>
           </div>
         </div>
@@ -177,18 +311,18 @@
       <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
         <div>
           <div class="relative overflow-hidden h-56 sm:h-64">
-            <img src="images/risotto.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80';" alt="Risotto Made to Crave" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80" alt="Risotto Made to Crave" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute top-4 right-4 bg-amber-500 text-slate-950 font-black text-xs px-3 py-1.5 rounded-full shadow-lg">
-              From 2,300 LKR
+              From 2,290 LKR
             </span>
           </div>
           <div class="p-5 sm:p-6">
             <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Risotto: Made to Crave</h3>
             <p class="text-slate-300 text-xs leading-relaxed mb-2">
-              • <strong>Mushroom Risotto:</strong> Creamy Arborio rice with sauteed mushrooms, herbs, and parmesan. <span class="text-amber-400 font-bold">(2,300 LKR)</span>
+              • <strong>Mushroom Risotto:</strong> Creamy Italian rice dish slowly cooked with butter & Parmesan. <span class="text-amber-400 font-bold">(2,290 LKR)</span>
             </p>
             <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              • <strong>Seafood Risotto:</strong> Infused with garlic, herbs, and a fresh seafood blend. <span class="text-amber-400 font-bold">(2,800 LKR)</span>
+              • <strong>Seafood Risotto:</strong> Infused with garlic, butter, and fresh seafood blend. <span class="text-amber-400 font-bold">(2,790 LKR)</span>
             </p>
           </div>
         </div>
@@ -206,39 +340,40 @@
     <div class="text-center mb-10 sm:mb-12">
       <span class="text-amber-500 font-bold uppercase tracking-wider text-xs">Atmosphere & Gelato</span>
       <h2 class="text-3xl md:text-5xl font-black text-white mt-2">Real Ambiance & Dishes</h2>
-      <p class="text-slate-400 mt-2 text-xs sm:text-sm">Capture of our house-made gelato and cozy Colombo 04 dining space</p>
+      <p class="text-slate-400 mt-2 text-xs sm:text-sm">Capture of our house-made gelato and cozy Colombo 03 dining space</p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
       <div class="gallery-img glass rounded-2xl overflow-hidden h-56 sm:h-60 group relative cursor-pointer">
-        <img src="images/food-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80';" alt="Pork Chop & Mash" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Pork Chop & Mash" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-          <span class="text-xs font-semibold text-amber-400">Pork Chop & Creamy Mash</span>
+          <span class="text-xs font-semibold text-amber-400">Grilled Pork Chop (2,690 LKR)</span>
         </div>
       </div>
 
       <div class="gallery-img glass rounded-2xl overflow-hidden h-56 sm:h-60 group relative cursor-pointer">
-        <img src="images/gelato-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1567206563064-6f60f4078b57?auto=format&fit=crop&w=600&q=80';" alt="Handcrafted Gelato Cone" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        <img src="https://images.unsplash.com/photo-1567206563064-6f60f4078b57?auto=format&fit=crop&w=600&q=80" alt="Handcrafted Gelato" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-          <span class="text-xs font-semibold text-amber-400">Andre's Handcrafted Gelato</span>
+          <span class="text-xs font-semibold text-amber-400">Andre's Handcrafted Gelato S'more</span>
         </div>
       </div>
 
       <div class="gallery-img glass rounded-2xl overflow-hidden h-56 sm:h-60 group relative cursor-pointer">
-        <img src="images/pasta-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80';" alt="Artisanal Pasta" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Pasta Carbonara" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-          <span class="text-xs font-semibold text-amber-400">Fresh Wood-Fired Pizza & Pasta</span>
+          <span class="text-xs font-semibold text-amber-400">Creamy Carbonara Pasta (2,590 LKR)</span>
         </div>
       </div>
 
       <div class="gallery-img glass rounded-2xl overflow-hidden h-56 sm:h-60 group relative cursor-pointer">
-        <img src="images/coffee-vibe.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80';" alt="Coffee and Love" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Iced Tea & Mocktails" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-          <span class="text-xs font-semibold text-amber-400">Artisanal Coffee & Drinks</span>
+          <span class="text-xs font-semibold text-amber-400">Fresh Mocktails & Iced Teas</span>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Real Reviews Section (Tripadvisor + Google Maps) -->
   <section id="reviews" class="py-16 sm:py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
     <div class="text-center mb-12 sm:mb-16">
@@ -253,7 +388,7 @@
           <div class="flex items-center justify-between mb-4">
             <div>
               <h4 class="font-bold text-white text-base">smandeera</h4>
-              <p class="text-slate-400 text-xs">Tripadvisor • May 2025</p>
+              <p class="text-slate-400 text-xs">Tripadvisor Review</p>
             </div>
             <i class="fa-solid fa-owl text-emerald-400 text-2xl"></i>
           </div>
@@ -273,7 +408,7 @@
           <div class="flex items-center justify-between mb-4">
             <div>
               <h4 class="font-bold text-white text-base">Tatziana</h4>
-              <p class="text-slate-400 text-xs">Google Maps Review • Aug 2026</p>
+              <p class="text-slate-400 text-xs">Google Maps Review</p>
             </div>
             <i class="fa-brands fa-google text-amber-400 text-2xl"></i>
           </div>
@@ -293,7 +428,7 @@
           <div class="flex items-center justify-between mb-4">
             <div>
               <h4 class="font-bold text-white text-base">Светлана А</h4>
-              <p class="text-slate-400 text-xs">Tripadvisor • Feb 2026</p>
+              <p class="text-slate-400 text-xs">Tripadvisor Review</p>
             </div>
             <i class="fa-solid fa-owl text-emerald-400 text-2xl"></i>
           </div>
@@ -320,10 +455,10 @@
           </h3>
           <ul class="space-y-4 text-slate-300 text-xs sm:text-sm">
             <li class="flex justify-between border-b border-slate-800 pb-3">
-              <span>Tuesday – Sunday</span> <span class="font-semibold text-white">11:00 AM – 11:00 PM</span>
+              <span>Monday – Sunday</span> <span class="font-semibold text-white">11:00 AM – 11:00 PM</span>
             </li>
-            <li class="flex justify-between border-b border-slate-800 pb-3 text-rose-400">
-              <span>Monday</span> <span class="font-bold bg-rose-500/10 px-3 py-0.5 rounded-full border border-rose-500/20">Closed</span>
+            <li class="flex justify-between border-b border-slate-800 pb-3">
+              <span>BYOB Service</span> <span class="font-bold text-amber-400">Available Daily</span>
             </li>
           </ul>
         </div>
@@ -339,15 +474,15 @@
             <i class="fa-solid fa-map-location-dot text-amber-500"></i> Location & Contact
           </h3>
           <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-3">
-            📍 <strong>33 Duplication Road, Colombo 00400, Sri Lanka</strong>
+            📍 <strong>19 Walukarama Rd, Colombo 03, Sri Lanka</strong>
           </p>
           <p class="text-slate-400 text-xs sm:text-sm mb-6">
-            📞 <strong>Phone:</strong> <a href="tel:+94771336868" class="text-amber-400 hover:underline">077 133 6868</a>
+            📞 <strong>Reservations:</strong> <a href="tel:+94771336868" class="text-amber-400 hover:underline">077 133 68 68</a>
           </p>
         </div>
 
         <div>
-          <a href="https://maps.google.com/?q=33+Duplication+Road,+Colombo+00400" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 sm:py-4 rounded-xl transition text-center block shadow-lg shadow-amber-500/20 text-xs sm:text-sm">
+          <a href="https://maps.google.com/?q=19+Walukarama+Rd,+Colombo+03" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 sm:py-4 rounded-xl transition text-center block shadow-lg shadow-amber-500/20 text-xs sm:text-sm">
             <i class="fa-solid fa-diamond-turn-right mr-2"></i> Open in Google Maps Navigation
           </a>
         </div>
@@ -365,7 +500,7 @@
     <p class="mt-2">Engineered & Designed by <strong class="text-amber-500">Siravis Web Studio</strong></p>
   </footer>
 
-  <!-- GSAP Animations Script Optimized for Mobile & Desktop -->
+  <!-- GSAP Animations & Carousel Script -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
@@ -378,7 +513,7 @@
       ease: "power3.out"
     });
 
-    // Menu Cards Mobile-Safe Animation
+    // Menu Cards Animation
     gsap.utils.toArray(".menu-card").forEach((card) => {
       gsap.fromTo(card,
         { opacity: 0, y: 40 },
@@ -396,7 +531,7 @@
       );
     });
 
-    // Gallery Fade Up Animation
+    // Gallery Animation
     gsap.utils.toArray(".gallery-img").forEach((img) => {
       gsap.fromTo(img,
         { opacity: 0, y: 30 },
@@ -432,7 +567,67 @@
       );
     });
 
-    // Refresh layout calculations for smooth mobile rendering
+    // Auto-Sliding Carousel JavaScript Logic
+    const slides = document.getElementById('slides');
+    const slideCount = slides.children.length;
+    const indicatorsContainer = document.getElementById('indicators');
+    let currentIndex = 0;
+    let slideInterval;
+
+    // Create Indicators dynamically
+    for (let i = 0; i < slideCount; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot', 'w-2.5', 'h-2.5', 'bg-white/40', 'rounded-full', 'cursor-pointer', 'transition-all', 'duration-300');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      indicatorsContainer.appendChild(dot);
+    }
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlides() {
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+          dot.classList.add('active', 'bg-amber-500', 'w-6');
+          dot.classList.remove('bg-white/40', 'w-2.5');
+        } else {
+          dot.classList.remove('active', 'bg-amber-500', 'w-6');
+          dot.classList.add('bg-white/40', 'w-2.5');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateSlides();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      updateSlides();
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateSlides();
+    }
+
+    // Auto slide timer (Every 4 seconds)
+    function startAutoSlide() {
+      slideInterval = setInterval(nextSlide, 4000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(slideInterval);
+    }
+
+    const carousel = document.getElementById('carousel');
+    carousel.addEventListener('mouseenter', stopAutoSlide);
+    carousel.addEventListener('mouseleave', startAutoSlide);
+
+    startAutoSlide();
+
     window.addEventListener("load", () => {
       ScrollTrigger.refresh();
     });
