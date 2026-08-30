@@ -56,11 +56,11 @@
       </div>
     </a>
 
-    <!-- Navigation Menu with Carousel Link Added -->
+    <!-- Navigation Menu -->
     <div class="hidden md:flex space-x-6 font-medium text-slate-300 text-sm">
       <a href="#menu-carousel" class="hover:text-amber-500 transition">Specials Carousel</a>
       <a href="#about" class="hover:text-amber-500 transition">About Us</a>
-      <a href="#specials" class="hover:text-amber-500 transition">Insta Specials</a>
+      <a href="#specials" class="hover:text-amber-500 transition">Our Menu</a>
       <a href="#gallery" class="hover:text-amber-500 transition">Live Vibe & Food</a>
       <a href="#reviews" class="hover:text-amber-500 transition">Reviews</a>
       <a href="#hours" class="hover:text-amber-500 transition">Location</a>
@@ -122,7 +122,7 @@
     </div>
   </section>
 
-  <!-- Auto-Sliding Menu Ad Banner Section (Moved to top right below Hero) -->
+  <!-- Section 1: Auto-Sliding Menu Carousel (Right below Hero) -->
   <section id="menu-carousel" class="py-12 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto">
     <div class="text-center mb-8">
       <span class="text-amber-500 font-bold uppercase tracking-wider text-xs">Featured Highlights</span>
@@ -249,19 +249,43 @@
     </div>
   </section>
 
-  <!-- Section: Official Instagram Menu Specials -->
+  <!-- Expanded Main Menu Cards Section -->
   <section id="specials" class="py-16 sm:py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
     <div class="text-center mb-12 sm:mb-16">
       <div class="flex items-center justify-center gap-2 mb-2">
-        <i class="fa-brands fa-instagram text-pink-500 text-xl"></i>
-        <span class="text-amber-500 font-bold uppercase tracking-wider text-xs">Featured On Instagram</span>
+        <i class="fa-solid fa-utensils text-amber-500 text-xl"></i>
+        <span class="text-amber-500 font-bold uppercase tracking-wider text-xs">Full Menu Highlights</span>
       </div>
-      <h2 class="text-3xl md:text-5xl font-black text-white">Chef's Signature Dishes</h2>
-      <p class="text-slate-400 mt-2 text-xs sm:text-sm">Directly from our official kitchen menu (@thechefstablecmb)</p>
+      <h2 class="text-3xl md:text-5xl font-black text-white">Chef's Signature Menu</h2>
+      <p class="text-slate-400 mt-2 text-xs sm:text-sm">Explore our top dining options (@thechefstablecmb)</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-      <!-- Item 1: Thai Green Curry -->
+      
+      <!-- Card 1: Special Nasi Goreng -->
+      <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group border border-amber-500/20">
+        <div>
+          <div class="relative overflow-hidden h-56 sm:h-64">
+            <img src="images/nasi-goreng.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80';" alt="Nasi Goreng" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-amber-500 text-slate-950 font-black text-xs px-3 py-1.5 rounded-full shadow-lg">
+              1,800 LKR
+            </span>
+          </div>
+          <div class="p-5 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Special Nasi Goreng</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Indonesian-style fried rice loaded with chicken & prawns, stir-fried in sweet soy sauce, garlic & chili. Served with chicken skewers, fried egg & prawn crackers.
+            </p>
+          </div>
+        </div>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order%20Nasi%20Goreng." target="_blank" class="w-full block text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl transition text-xs sm:text-sm">
+            Order via WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Thai Green Curry -->
       <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
         <div>
           <div class="relative overflow-hidden h-56 sm:h-64">
@@ -273,7 +297,7 @@
           <div class="p-5 sm:p-6">
             <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Thai Green Curry</h3>
             <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              A fragrant Thai classic made with coconut milk base, tender chicken/prawn, chili, herbs, spices, and Thai basil. Served with fluffy rice.
+              A fragrant Thai classic made with rich coconut milk, tender chicken/prawn, fresh herbs, spices & Thai basil. Served hot with steamed rice.
             </p>
           </div>
         </div>
@@ -284,30 +308,30 @@
         </div>
       </div>
 
-      <!-- Item 2: Live Music Vibe -->
-      <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between border border-amber-500/30 group">
+      <!-- Card 3: Grilled Pork Chops & Mash -->
+      <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
         <div>
           <div class="relative overflow-hidden h-56 sm:h-64">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Acoustic Live Music" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-4 right-4 bg-emerald-500 text-slate-950 font-black text-xs px-3 py-1.5 rounded-full shadow-lg">
-              Live Experience
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Grilled Pork Chops" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-amber-500 text-slate-950 font-black text-xs px-3 py-1.5 rounded-full shadow-lg">
+              2,690 LKR
             </span>
           </div>
           <div class="p-5 sm:p-6">
-            <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Acoustic & BYOB Nights</h3>
+            <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Pork Chop & Mash</h3>
             <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Enjoy live acoustic music, soothing ambient lighting, and bring your own bottle (BYOB) for the ultimate dining evening with friends in Colombo 03.
+              Juicy grilled pork chops served over buttered mashed potatoes, grilled vegetables, and rich savory gravy. A favorite main course.
             </p>
           </div>
         </div>
         <div class="px-5 sm:px-6 pb-5 sm:pb-6">
-          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20reserve%20a%20table%20for%20Live%20Music%20Night." target="_blank" class="w-full block text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl transition text-xs sm:text-sm">
-            Reserve Table
+          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order%20Pork%20Chops." target="_blank" class="w-full block text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 font-bold py-3 rounded-xl transition text-xs sm:text-sm">
+            Order via WhatsApp
           </a>
         </div>
       </div>
 
-      <!-- Item 3: Risotto -->
+      <!-- Card 4: Italian Risotto Selection -->
       <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group">
         <div>
           <div class="relative overflow-hidden h-56 sm:h-64">
@@ -319,10 +343,10 @@
           <div class="p-5 sm:p-6">
             <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Risotto: Made to Crave</h3>
             <p class="text-slate-300 text-xs leading-relaxed mb-2">
-              • <strong>Mushroom Risotto:</strong> Creamy Italian rice dish slowly cooked with butter & Parmesan. <span class="text-amber-400 font-bold">(2,290 LKR)</span>
+              • <strong>Mushroom Risotto:</strong> Slow-cooked Italian arborio rice with butter & Parmesan <span class="text-amber-400 font-bold">(2,290 LKR)</span>
             </p>
             <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              • <strong>Seafood Risotto:</strong> Infused with garlic, butter, and fresh seafood blend. <span class="text-amber-400 font-bold">(2,790 LKR)</span>
+              • <strong>Seafood Risotto:</strong> Garlic-infused rice with fresh ocean prawns & squid <span class="text-amber-400 font-bold">(2,790 LKR)</span>
             </p>
           </div>
         </div>
@@ -332,6 +356,53 @@
           </a>
         </div>
       </div>
+
+      <!-- Card 5: Handcrafted Specialty Gelato -->
+      <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between group border border-amber-500/20">
+        <div>
+          <div class="relative overflow-hidden h-56 sm:h-64">
+            <img src="images/gelato-smore.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1567206563064-6f60f4078b57?auto=format&fit=crop&w=800&q=80';" alt="Handcrafted Gelato" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-rose-500 text-white font-black text-xs px-3 py-1.5 rounded-full shadow-lg">
+              1,200 LKR
+            </span>
+          </div>
+          <div class="p-5 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Andre's Special Gelato</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              House-made authentic artisanal Italian gelato prepared daily by owner Andre. Try our famous Chocolate S'more with toasted marshmallows!
+            </p>
+          </div>
+        </div>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20order%20Gelato." target="_blank" class="w-full block text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl transition text-xs sm:text-sm">
+            Order Dessert Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 6: Live Music & BYOB Night -->
+      <div class="menu-card glass-card rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300 flex flex-col justify-between border border-emerald-500/30 group">
+        <div>
+          <div class="relative overflow-hidden h-56 sm:h-64">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Acoustic Live Music" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-emerald-500 text-slate-950 font-black text-xs px-3 py-1.5 rounded-full shadow-lg">
+              Live Experience
+            </span>
+          </div>
+          <div class="p-5 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-black text-white mb-2">Acoustic & BYOB Nights</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              Enjoy live acoustic music, soothing ambient lighting, and bring your own bottle (BYOB) for the ultimate evening with friends in Colombo 03.
+            </p>
+          </div>
+        </div>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+          <a href="https://wa.me/94771336868?text=Hi!%20I%20want%20to%20reserve%20a%20table%20for%20Live%20Music%20Night." target="_blank" class="w-full block text-center bg-slate-800 hover:bg-amber-500 hover:text-slate-950 font-bold py-3 rounded-xl transition text-xs sm:text-sm">
+            Reserve Table
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
